@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crochet</title>
+    <style>
+      body {
+        background: linear-gradient(
+          -225deg,
+          #5d9fff 0%,
+          #b8dcff 48%,
+          #6bbbff 100%
+        );
+      }
+
+      h1 {
+        text-align: center;
+      }
+      h2 {
+        text-align: center;
+      }
+      img {
+        max-width: 100%;
+      }
+      p {
+        font-size: 16px;
+        line-height: 1.5;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        border: 1px solid lightskyblue;
+        background: white;
+        font-size: 20px;
+        padding: 10px 15px;
+        border-radius: 6px;
+        transition: all 150ms ease-in-out;
+      }
+      button:hover {
+        background: lightskyblue;
+        cursor: pointer;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 20px auto;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+      }
+      footer {
+        text-align: center;
+        margin: 10px 0;
+        font-size: 18px;
+      }
+      .theme-button {
+        font-size: 10px;
+        background: black;
+        color: white;
+        padding: 5 8px;
+      }
+      .theme-button:hover {
+        color: black;
+        background: white;
+      }
+      .crochet-intro-picture {
+        border-radius: 10px;
+        transition: all 150ms ease-in-out;
+      }
+      .crochet-intro-picture:hover {
+        filter: contrast(50%);
+        transform: scale(1.1);
+      }
+      .grid {
+        margin: 15px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 15px;
+      }
+      .grid img {
+        width: 100%;
+        height: 50%;
+        margin: auto 0;
+        border-radius: 10px;
+        transition: all 150ms ease-in-out;
+      }
+      .grid img:hover {
+        transform: scale(2);
+      }
+      .dark {
+        background: linear-gradient(
+          114.9deg,
+          rgb(34, 34, 34) 8.3%,
+          rgb(0, 40, 60) 41.6%,
+          rgb(0, 143, 213) 93.4%
+        );
+        color: white;
+      }
+      .dark .container {
+        background: #34495e;
+      }
+      .dark a {
+        color: bisque;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="theme-button">Dark Theme</button>
+    <div class="container">
+      <h1>Do you Crochet? 🧶</h1>
+      <h2>A fun hobby for all ages!</h2>
+      <a href="https://en.wikipedia.org/wiki/Crochet" target="_blank">
+        <img
+          src="https://plus.unsplash.com/premium_photo-1675799559554-f2395a6afa45?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y3JvY2hldHxlbnwwfHwwfHx8MA%3D%3D"
+          alt=""
+          class="crochet-intro-picture"
+        />
+      </a>
+      <div class="grid">
+        <img
+          src="https://plus.unsplash.com/premium_photo-1675799745780-87b6fe5c5822?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y3JvY2hldHxlbnwwfHwwfHx8MA%3D%3D"
+          alt=""
+        />
+        <img
+          src="https://images.unsplash.com/photo-1519412849983-957822373d02?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y3JvY2hldHxlbnwwfHwwfHx8MA%3D%3D"
+          alt=""
+        />
+        <img
+          src="https://plus.unsplash.com/premium_photo-1675799579633-a00461c966bb?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjF8fGNyb2NoZXR8ZW58MHx8MHx8fDA%3D"
+          alt=""
+        />
+        <img
+          src="https://i.etsystatic.com/8375113/r/il/1ef2bd/3567850704/il_1588xN.3567850704_cm4w.jpg"
+          alt=""
+        />
+      </div>
+      <p>
+        Crochet is a process of creating textiles by using a crochet hook to
+        interlock loops of yarn, thread, or strands of other materials. The name
+        is derived from the French term croc, which means 'hook'. Hooks can be
+        made from a variety of materials, such as metal, wood, bamboo, bone or
+        even plastic.
+        <br /><br />
+        📖
+        <a href="https://en.wikipedia.org/wiki/Crochet">
+          <strong> Read on Wikipedia </strong>
+        </a>
+      </p>
+      <a
+        href="https://www.yarnspirations.com/en-ca/collections/patterns?filter.p.m.global.skill_type=Crochet&srsltid=AfmBOoqyELVxTZ620oRoVZyM0bkMW4mgHgvw4CPUGqB-z64yRyZYg2We"
+      >
+        <button>Patterns</button>
+      </a>
+    </div>
+    <footer>Coded by Lara Teter 💖</footer>
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+      let themeButton = document.querySelector(".theme-button");
+      themeButton.addEventListener("click", changeTheme);
+    </script>
+  </body>
+</html>
